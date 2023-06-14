@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Tela Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="area-form">
+          <form>
+            <div class="header">
+              <ion-icon name="log-in-outline"></ion-icon>
+              <div class="title">Faça seu Login</div>
+            </div>
+            <p>Entre com suas informações de cadastro.</p>
+
+            <label for="email">E-mail</label>
+            <div class="input mail">
+              <ion-icon id="icon-mail" name="mail-outline"></ion-icon>
+              <input type="text" placeholder="Digite seu email" class="email" />
+            </div>
+            <label for="password">Senha</label>
+            <div class="input password">
+              <ion-icon
+                id="icon-password"
+                name="lock-closed-outline"
+              ></ion-icon>
+              <input type="text" placeholder="Digite sua senha" class="pass" />
+              <ion-icon id="icon-eye" name="eye-outline"></ion-icon>
+            </div>
+            <div class="area-radio">
+              <div class="checkbox">
+                <input type="checkbox" id="lembre-me" />
+                <label for="lembre-me">Lembre-me</label>
+                <a>Esqueci minha senha</a>
+              </div>
+            </div>
+            <button>ENTRAR</button>
+            <div class="row">
+              <span>Não tem uma conta? </span>
+              <div>Registre-se</div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="areaImg"></div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

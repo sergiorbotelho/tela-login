@@ -1,0 +1,299 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --text-base: #afb6c2;
+  --text-title: #d4ccb6;
+  --background: #191816;
+  --form-background: #24221f;
+  --primary-color: #ffc632;
+}
+.ligth {
+  --text-base: #24221f;
+  --text-title: #2e2312;
+  --background: #e4dbcd;
+  --form-background: #f1eadd;
+  --primary-color: #574c3a;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: var(--background);
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 512px;
+  background-color: var(--form-background);
+  width: 100%;
+  max-width: 572px;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.areaImg {
+  width: 100%;
+  background-image: url("./assets/side-image.jpg");
+  background-size: cover;
+  max-width: 900px;
+  height: 100vh;
+}
+form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+.header .title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  margin-left: 10px;
+  color: var(--text-title);
+}
+
+.header ion-icon {
+  color: var(--primary-color);
+  font-size: 42px;
+  margin-left: -10px;
+}
+p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-base);
+  margin-top: 10px;
+  margin-bottom: 27px;
+}
+
+form label {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-base);
+}
+
+form .input {
+  display: flex;
+  align-items: center;
+  width: 335px;
+  height: 44px;
+  border: 1px solid #868686;
+
+  border-radius: 4px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+form .input ion-icon {
+  font-size: 24px;
+  color: #d4ccb6;
+  padding: 8px;
+  position: relative;
+}
+form .input #eyes {
+  position: relative;
+  left: -8px;
+}
+
+form .input input {
+  width: 100%;
+  height: 100%;
+  padding-left: 8px;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  color: #868686;
+  font-size: 16px;
+}
+
+.checkbox {
+  max-width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px 0 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.checkbox label {
+  user-select: none;
+  margin-left: 10px;
+  margin-right: 50px;
+}
+
+.checkbox input {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #868686;
+  border-radius: 4px;
+}
+.checkbox input:checked:before {
+  content: "";
+  width: 8px;
+  height: 15px;
+  border-bottom: 2px solid #1a1a1a;
+  border-right: 2px solid #1a1a1a;
+  position: relative;
+  top: -4px;
+  transform: rotate(45deg);
+}
+.checkbox input:checked {
+  background-color: var(--primary-color);
+}
+.checkbox:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.checkbox a {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  cursor: pointer;
+}
+
+button {
+  display: block;
+  background: var(--primary-color);
+  border-radius: 4px;
+  width: 334px;
+  height: 51px;
+  padding: 12px 24px;
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  line-height: 27px;
+  font-family: "Poppins";
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: var(--form-background);
+}
+button:hover {
+  opacity: 0.7;
+}
+form .row {
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  max-width: 334px;
+}
+.row div {
+  font-weight: 600;
+  cursor: pointer;
+}
+.ok {
+  border: 2px solid var(--primary-color) !important;
+  color: var(--primary-color) !important;
+}
+@media screen and (max-width: 768px) {
+  .areaImg {
+    display: none;
+  }
+  .content {
+    background-color: #191816;
+  }
+}
+@media screen and (max-width: 320px) {
+  .header .title {
+    margin-left: 10px;
+  }
+
+  .header ion-icon {
+    font-size: 32px;
+    margin-left: 18px;
+  }
+  p {
+    width: 280px;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 27px;
+    margin-left: 20px;
+    flex-wrap: wrap;
+  }
+  form label {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+
+    margin-left: 20px;
+  }
+
+  form .input {
+    display: flex;
+    align-items: center;
+    width: 280px;
+    height: 44px;
+    margin-left: 20px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .checkbox {
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px 0 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+  .checkbox label {
+    margin-left: 10px;
+    margin-right: 15px;
+    font-size: 14px;
+  }
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    width: 280px;
+    height: 44px;
+    padding: 12px 24px;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+  form .row {
+    gap: 30px;
+    max-width: 334px;
+    font-size: 14px;
+    margin-left: 20px;
+  }
+}
