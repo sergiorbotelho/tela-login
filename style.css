@@ -10,6 +10,7 @@
   --background: #191816;
   --form-background: #24221f;
   --primary-color: #ffc632;
+  --icon-theme: url("./assets/sunny-outline.svg");
 }
 .ligth {
   --text-base: #24221f;
@@ -17,6 +18,7 @@
   --background: #e4dbcd;
   --form-background: #f1eadd;
   --primary-color: #574c3a;
+  --icon-theme: url("./assets/moon-outline.svg");
 }
 
 body {
@@ -36,12 +38,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 512px;
+  height: 600px;
   background-color: var(--form-background);
   width: 100%;
   max-width: 572px;
   border-radius: 4px;
   margin: 0 auto;
+  position: relative;
 }
 
 .areaImg {
@@ -100,14 +103,13 @@ form .input {
   width: 335px;
   height: 44px;
   border: 1px solid #868686;
-
   border-radius: 4px;
   margin-bottom: 10px;
   margin-top: 10px;
 }
 form .input ion-icon {
   font-size: 24px;
-  color: #d4ccb6;
+  color: var(--text-base);
   padding: 8px;
   position: relative;
 }
@@ -214,6 +216,30 @@ form .row {
   font-weight: 600;
   cursor: pointer;
 }
+.switch {
+  width: 60px;
+  height: 20px;
+  border: 1px solid var(--text-base);
+  border-radius: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.left {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border-radius: 18px;
+  transition: all ease-in-out 0.3s;
+  bottom: 50%;
+  background: var(--primary-color) var(--icon-theme);
+  right: 10%;
+}
 .ok {
   border: 2px solid var(--primary-color) !important;
   color: var(--primary-color) !important;
@@ -223,7 +249,7 @@ form .row {
     display: none;
   }
   .content {
-    background-color: #191816;
+    background-color: var(--background);
   }
 }
 @media screen and (max-width: 320px) {

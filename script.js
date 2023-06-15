@@ -37,3 +37,15 @@ inputPassword.addEventListener("blur", () => {
   iconPassword.style.color = "#d4ccb6"
   iconEye.style.color = "#d4ccb6"
 })
+
+//Switch mode
+const switchArea = document.querySelector(".switch")
+const btnSwitch = document.querySelector(".left")
+
+switchArea.addEventListener("click", () => {
+  html.classList.toggle("ligth")
+
+  btnSwitch.style.right === "-50%"
+    ? (btnSwitch.style.right = "10%")
+    : (btnSwitch.style.right = "-50%")
+})
