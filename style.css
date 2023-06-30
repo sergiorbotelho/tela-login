@@ -117,6 +117,9 @@ form .input #eyes {
   position: relative;
   left: -8px;
 }
+#icon-eye {
+  cursor: pointer;
+}
 
 form .input input {
   width: 100%;

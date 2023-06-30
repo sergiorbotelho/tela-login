@@ -6,6 +6,7 @@ const iconMail = document.querySelector(".input #icon-mail")
 const iconEye = document.querySelector(".input #icon-eye")
 const iconPassword = document.querySelector(".input #icon-password")
 const html = document.querySelector("html")
+const eye = document.querySelector("#icon-eye")
 
 inputEmail.addEventListener("focus", () => {
   if (html.classList.contains("ligth")) {
@@ -48,4 +49,12 @@ switchArea.addEventListener("click", () => {
   btnSwitch.style.right === "-50%"
     ? (btnSwitch.style.right = "10%")
     : (btnSwitch.style.right = "-50%")
+})
+
+eye.addEventListener("click", () => {
+  if (inputPassword.getAttribute("type") === "password") {
+    inputPassword.setAttribute("type", "text")
+  } else {
+    inputPassword.setAttribute("type", "password")
+  }
 })
